@@ -31,7 +31,7 @@ class BadCredentialsError extends Error {
   constructor () {
     super()
     this.name = 'BadCredentialsError'
-    this.message = 'The provided username or password is incorrect'
+    this.message = 'The provided email or password is incorrect'
   }
 }
 
