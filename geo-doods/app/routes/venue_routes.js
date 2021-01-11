@@ -30,7 +30,8 @@ const router = express.Router()
 // INDEX
 // GET /venues
 router.get('/venues', requireToken, (req, res, next) => {
-  Venue.find()
+  const ownerId = req.user._id
+  Venue.find({owner: ownerId})
     .then(venues => {
       // `venues` will be an array of Mongoose documents
       // we want to convert each one to a POJO, so we use `.map` to
@@ -47,9 +48,9 @@ router.get('/venues', requireToken, (req, res, next) => {
 // GET /venues/:id
 router.get('/venues/:id', requireToken, (req, res, next) => {
   // req.params.id will be set based on the `:id` in the route
-  Venue.find({ _id: req.params.id, owner: req.user._id })
+  Venue.findOne({ _id: req.params.id, owner: req.user._id })
     .then(handle404)
-    // if `findById` is succesful, respond with 200 and "venue" JSON
+    // if `findOne` is succesful, respond with 200 and "venue" JSON
     .then(venue => res.status(200).json({ venue: venue }))
     // if an error occurs, pass it to the handler
     .catch(next)
