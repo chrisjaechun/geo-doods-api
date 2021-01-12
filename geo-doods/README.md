@@ -1,8 +1,19 @@
+### Database Description
+
+Geo-Doods (not about Pokemon), is a database that allows users to share which venues they've been to and for which event. A user must be signed-up first to be able to sign-in, upon sign-in they'll be able to access the sidebar which will allow them to create/submit venues, view all their venues, grab a single venue (by its Mongoose-generated ID), update a venue and delete a venue for the events that they've been to!
+
 ### List of technologies Used
 
 - Heroku
 - MongoDB
 -- Mongoose
+
+### User Stories
+
+- As a user, I would like to be able to submit venues I've been to.
+- As a user, I would like to be able to view which venues I've been to.
+- As a user, I would like to be the only one to edit my venues.
+- As a user, I would like to delete certain venues.
 
 ### ERD
 
