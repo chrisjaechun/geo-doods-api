@@ -38,3 +38,7 @@ Deployed to Heroku
 1/10
 
 It looks like my index route was not running as intended - the route in its original state showed every created venue (regardless of owner). I was able to take a look at what may have been causing this with a colleague and ultimately found that the owner ID was never declared locally.
+
+### Unfinished
+
+Will like to add a `Reviews` model for `Venues`, down the line.
