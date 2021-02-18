@@ -10,6 +10,7 @@ The (infamous) API for the (not-widely-heralded) GEO-DOODS database! This API ha
 
 ### List of technologies Used
 
+- Express
 - Heroku
 - MongoDB
 -- Mongoose
